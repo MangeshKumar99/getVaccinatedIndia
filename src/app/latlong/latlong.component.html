@@ -1,0 +1,41 @@
+<br><br><br><br>
+
+
+<div class="container">
+    <div class="my-form">
+    <form>
+        <div class="form-group">
+            <label for="lat">Enter your latitude</label>
+            <input class="mr-4" type="text" placeholder="Enter latitude" #mylat>
+          </div>
+    
+        <div class="form-group">
+            <label for="long">Enter your longitude</label>
+            <input type="text" placeholder="Enter longitude" #mylong>
+          </div>
+    </form>
+
+    
+</div>
+<button (click)="showSlotDetailsByLatAndLong(mylat.value,mylong.value)" type="button" class="btn btn-success btn-small">Try it out</button>
+    <div class="display-cards">
+        <div class="col d-flex justify-content-center" style="width: 70rem;">
+            <div class="card-body">
+                <div *ngFor="let i of data.centers ">
+                    <div class="box" style="background-color:#A7BFE8">
+                        <h5 class="card-title">Center_ID:{{i.center_id}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Name:{{i.name}}</h6>
+                        <p class="card-text">DistrictName:{{i.district_name}}</p>
+                        <p class="card-text">Location:{{i.location}}</p>
+                        <p class="card-text">Latitude:{{i.lat}}</p>
+                        <p class="card-text">Longitude:{{i.long}}</p>
+                    </div>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,39 @@
+
+<br><br><br><br>
+
+
+<div class="container">
+    <div class="my-form">
+    <form>
+        <div class="form-group">
+            <label for="district_id">Enter your district_id</label>
+            <input class="mr-4" type="text" placeholder="Enter district_id" #mydis>
+          </div>
+    
+        <div class="form-group">
+            <label for="date">Enter date</label>
+            <input type="text" placeholder="dd--mm--yyyy" #mydate>
+          </div>
+    </form>
+
+    
+</div>
+<button (click)="showSlotDetailsByDistrict(mydis.value,mydate.value)" type="button" class="btn btn-success btn-small">Try it out</button>
+    <div class="display-cards">
+        <div class="col d-flex justify-content-center" style="width: 70rem;">
+            <div class="card-body">
+                <div *ngFor="let i of data.sessions ">
+                    <div class="box" style="background-color:#A7BFE8">
+                        <h5 class="card-title">Address:{{i.address}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">District:{{i.district_name}}</h6>
+                        <p class="card-text">Min_Age_Limit:{{i.min_age_limit}}</p>
+                        <p class="card-text">Vaccine:{{i.vaccine}}</p>
+                        <p class="card-text">Slots From:{{i.from}}</p>
+                        <p class="card-text">Slots To:{{i.to}}</p>
+                    </div>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

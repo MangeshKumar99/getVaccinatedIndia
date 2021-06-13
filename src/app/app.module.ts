@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PinComponent } from './pin/pin.component';
+import { DistrictComponent } from './district/district.component';
+import { LatlongComponent } from './latlong/latlong.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PinComponent,
+    DistrictComponent,
+    LatlongComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
